@@ -6,10 +6,13 @@ import Footer from '../Footer/Footer'
 const MainLayout = () => {
     return (
         <div>
-            <Navbar></Navbar>
-            <div className='lg:min-h-[calc(100vh-100px)] xl:min-h-[calc(100vh-200px)] w-11/12 mx-auto'>
-                <Outlet />
+            <div className='bg-base-300'>
+                <Navbar></Navbar>
+                <div className='lg:min-h-[calc(100vh-100px)] xl:min-h-[calc(100vh-200px)] w-11/12 mx-auto'>
+                    <Outlet />
+                </div>
             </div>
+
             <Footer></Footer>
         </div>
     )

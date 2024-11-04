@@ -1,11 +1,17 @@
-import React from 'react'
+// import React from 'react'
+// import PropTypes from 'prop-types'
 
-const Categories = () => {
-    return (
-        <div>
-            <h1>This is Category components </h1>
-        </div>
-    )
-}
+// const Categories = ({ category }) => {
+//     return (
+//         <div>
+//              categories.map(category => )
 
-export default Categories
+//         </div>
+//     )
+// }
+
+// Categories.propTypes = {
+
+// }
+
+// export default Categories

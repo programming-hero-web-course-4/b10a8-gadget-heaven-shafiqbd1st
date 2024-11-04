@@ -1,0 +1,292 @@
+[
+    {
+        "product_id": 1,
+        "product_title": "Apple iPhone 15 Pro Max",
+        "product_image": "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-15-pro-max-1.jpg",
+        "category": "Smartphones",
+        "price": 1299,
+        "description": "Experience the ultimate smartphone with the iPhone 15 Pro Max.",
+        "specification": [
+            "6.7-inch Super Retina XDR display",
+            "A17 Bionic chip",
+            "Triple-camera system (48MP Main, 12MP Telephoto, 12MP Ultrawide)",
+            "LiDAR Scanner",
+            "Up to 2TB storage"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "product_id": 2,
+        "product_title": "Samsung Galaxy S23 Ultra",
+        "product_image": "https://gurbuzgrup.com/uploads/2023/02/samsung-s23-ultra-1.webp",
+        "category": "Smartphones",
+        "price": 1199,
+        "description": "A premium smartphone with high-resolution camera and dynamic AMOLED display.",
+        "specification": [
+            "6.8-inch Dynamic AMOLED 2X display",
+            "Snapdragon 8 Gen 2",
+            "200MP quad-camera system",
+            "5000mAh battery",
+            "Up to 1TB storage"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": 3,
+        "product_title": "Dell XPS 13",
+        "product_image": "https://i5.walmartimages.com/seo/Dell-XPS-13-9300-Intel-Core-i7-1065G7-1-3-GHz-Win-10-Pro-Iris-Plus-Graphics-16-GB-RAM-512-SSD-NVMe-13-4-touchscreen-1920-x-1200-Wi-Fi-6-silver_2ddd9a78-5a96-4a89-ac67-1bb3a07dbc33.23c5c186460aca291772af14cad13082.jpeg",
+        "category": "Laptops",
+        "price": 999,
+        "description": "The ultimate compact laptop with stunning performance and display.",
+        "specification": [
+            "13.4-inch FHD+ InfinityEdge display",
+            "Intel Core i7 11th Gen",
+            "16GB RAM",
+            "512GB SSD",
+            "Intel Iris Xe Graphics"
+        ],
+        "availability": true,
+        "rating": 4.5
+    },
+    {
+        "product_id": 4,
+        "product_title": "Apple MacBook Air M2",
+        "product_image": "https://adminapi.applegadgetsbd.com/storage/media/large/MacBook-Air-M2-Price-in-Bangladesh-1926.jpg",
+        "category": "Laptops",
+        "price": 1199,
+        "description": "Lightweight laptop with Apple's M2 chip for outstanding performance.",
+        "specification": [
+            "13.6-inch Liquid Retina display",
+            "Apple M2 chip",
+            "8GB RAM",
+            "256GB SSD",
+            "Battery life up to 18 hours"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "product_id": 5,
+        "product_title": "Apple Watch Series 9",
+        "product_image": "https://www.custommacbd.com/cdn/shop/files/Watch-s9-starlight-Custom-Mac-BD.jpg",
+        "category": "Smart Watches",
+        "price": 399,
+        "description": "The latest smartwatch with advanced health and fitness tracking.",
+        "specification": [
+            "Always-On Retina display",
+            "Blood Oxygen app",
+            "ECG app",
+            "Up to 18 hours battery life",
+            "Water resistant"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": 6,
+        "product_title": "Samsung Galaxy Watch 6",
+        "product_image": "https://image-us.samsung.com/us/business/mobile/wearables/galaxy-watch6/OG_GWatch6_B2B_KV.jpg",
+        "category": "Smart Watches",
+        "price": 349,
+        "description": "Stylish smartwatch with comprehensive health monitoring features.",
+        "specification": [
+            "1.5-inch Super AMOLED display",
+            "Heart rate and SpO2 monitoring",
+            "Sleep tracking",
+            "GPS and NFC support",
+            "Up to 40 hours battery life"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "product_id": 7,
+        "product_title": "Apple AirPods Pro",
+        "product_image": "https://www.tct.com.bd/wp-content/uploads/2022/04/MWP22_720x.jpg",
+        "category": "Accessories",
+        "price": 249,
+        "description": "High-quality noise-canceling earbuds for immersive sound.",
+        "specification": [
+            "Active Noise Cancellation",
+            "Transparency mode",
+            "Spatial audio",
+            "Sweat and water resistant",
+            "Up to 4.5 hours of listening time"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "product_id": 8,
+        "product_title": "Sony WH-1000XM5",
+        "product_image": "https://www.sonysmart.com.bd/public/uploads/all/hbi1tSSAMIq58Udv6gTOiPJ0oXtCJJKqZutdPkPR.jpg",
+        "category": "Accessories",
+        "price": 399,
+        "description": "Industry-leading noise-canceling headphones with crystal-clear sound.",
+        "specification": [
+            "30-hour battery life",
+            "Dual Noise Sensor technology",
+            "Touch controls",
+            "Quick attention mode",
+            "Compatible with Alexa and Google Assistant"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "product_id": 9,
+        "product_title": "HP Spectre x360",
+        "product_image": "https://computermania-bd.b-cdn.net/wp-content/uploads/HP-Spectre-x360-15-Price-in-BD.jpg",
+        "category": "Laptops",
+        "price": 1399,
+        "description": "High-performance 2-in-1 laptop with stunning design and features.",
+        "specification": [
+            "13.3-inch FHD display",
+            "Intel Core i7",
+            "16GB RAM",
+            "1TB SSD",
+            "Convertible design"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "product_id": 10,
+        "product_title": "Google Pixel 7 Pro",
+        "product_image": "https://kryinternational.com/wp-content/uploads/2024/06/Google-Pixel-7-Used-Price-in-Bangladesh.jpg",
+        "category": "Smartphones",
+        "price": 899,
+        "description": "Google's flagship phone with the latest Android features and camera quality.",
+        "specification": [
+            "6.7-inch QHD+ display",
+            "Google Tensor G2",
+            "Triple-camera system",
+            "5G connectivity",
+            "5000mAh battery"
+        ],
+        "availability": true,
+        "rating": 4.5
+    },
+    {
+        "product_id": 11,
+        "product_title": "Lenovo ThinkPad X1",
+        "product_image": "https://aroz.com.bd/wp-content/uploads/2022/10/lenovo-laptops-x1-carbon-6th-gen-hero.webp",
+        "category": "Laptops",
+        "price": 1499,
+        "description": "Business-class laptop with durable build and high performance.",
+        "specification": [
+            "14-inch FHD display",
+            "Intel Core i7",
+            "16GB RAM",
+            "512GB SSD",
+            "Carbon fiber chassis"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": 12,
+        "product_title": "Huawei MateBook X Pro",
+        "product_image": "https://technave.com/data/files/article/202208260218088570.jpg",
+        "category": "Laptops",
+        "price": 1299,
+        "description": "High-performance ultrabook with immersive display and compact design.",
+        "specification": [
+            "13.9-inch 3K display",
+            "Intel Core i7",
+            "16GB RAM",
+            "1TB SSD",
+            "Thunderbolt 3 support"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "product_id": 13,
+        "product_title": "OnePlus 11",
+        "product_image": "https://www.notebookcheck.net/fileadmin/Notebooks/News/_nc3/OnePlus_10T_4.jpg",
+        "category": "Smartphones",
+        "price": 699,
+        "description": "High-performance smartphone with fast charging and smooth display.",
+        "specification": [
+            "6.7-inch 120Hz AMOLED display",
+            "Snapdragon 8 Gen 2",
+            "50MP triple camera",
+            "5000mAh battery",
+            "80W fast charging"
+        ],
+        "availability": true,
+        "rating": 4.4
+    },
+    {
+        "product_id": 14,
+        "product_title": "Sony Xperia 1 V",
+        "product_image": "https://www.chargerlab.com/wp-content/uploads/2023/05/2023053102131966.png",
+        "category": "Smartphones",
+        "price": 999,
+        "description": "Advanced smartphone with 4K display and professional-grade camera.",
+        "specification": [
+            "6.5-inch 4K HDR OLED display",
+            "Snapdragon 8 Gen 2",
+            "Triple 12MP camera system",
+            "5000mAh battery",
+            "Stereo speakers"
+        ],
+        "availability": true,
+        "rating": 4.5
+    },
+    {
+        "product_id": 15,
+        "product_title": "Microsoft Surface ",
+        "product_image": "https://static.bhphoto.com/images/images500x500/1666362913_1729186.jpg",
+        "category": "Laptops",
+        "price": 1299,
+        "description": "Sleek and powerful laptop with a high-resolution PixelSense display.",
+        "specification": [
+            "13.5-inch PixelSense display",
+            "Intel Core i7",
+            "16GB RAM",
+            "512GB SSD",
+            "Battery life up to 18 hours",
+            "Alcantara fabric keyboard"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "product_id": 16,
+        "product_title": "Fitbit Charge 5",
+        "product_image": "https://www.gizmochina.com/wp-content/uploads/2021/08/Fitbit-Charge-5.jpg",
+        "category": "Smart Watches",
+        "price": 179,
+        "description": "Advanced fitness tracker with heart rate, sleep, and stress monitoring.",
+        "specification": [
+            "Color touchscreen",
+            "24/7 heart rate monitoring",
+            "Built-in GPS",
+            "Up to 7 days battery life",
+            "Water resistant up to 50m"
+        ],
+        "availability": true,
+        "rating": 4.3
+    },
+    {
+        "product_id": 17,
+        "product_title": "Amazon Echo Dot",
+        "product_image": "https://reviewcentralme.com/wp-content/uploads/2022/12/Amazon-Echo-Dot-5th-generation-review-1.jpg",
+        "category": "Accessories",
+        "price": 49,
+        "description": "Compact smart speaker with Alexa for hands-free control.",
+        "specification": [
+            "Alexa voice assistant",
+            "Compact design",
+            "Improved audio quality",
+            "Bluetooth compatible",
+            "Multiple color options"
+        ],
+        "availability": true,
+        "rating": 4.6
+    }
+]

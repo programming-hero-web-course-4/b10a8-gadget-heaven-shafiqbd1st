@@ -1,25 +1,59 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import React, { useState } from 'react'
+import { NavLink, Outlet, useLoaderData } from 'react-router-dom'
+import Card from '../Card/Card';
+import AllCards from '../AllCards/AllCards';
 
 const Home = () => {
+
+    const categories = useLoaderData();
+    // const [category, setCategory] = useState(data);
+
+    // const handleCategory = (item) => {
+    //     console.log(item)
+    //     const tempData = [...data].filter(d => d.category == item);
+    //     console.log(tempData.length)
+    //     if (tempData.length > 0) {
+    //         console.log('object')
+    //         setCategory(tempData);
+    //     }
+    //     else if (item == 'ALL') {
+    //         setCategory(data);
+    //     }
+    //     else {
+    //         setCategory([]);
+    //     }
+    // }
+
+
     return (
-        <div className='w-11/12 mx-auto mt-64 border border-red-300'>
+        <div className='w-11/12 mx-auto mt-64 pb-5'>
             <h1 className='text-4xl text-center font-bold text-[#9538E2]'>Explore Cutting-Edge Gadgets</h1>
             <div className='my-5'>
-                <div className='grid grid-cols-2 lg:grid-cols-12 gap-4 p'>
-                    <div className='col-span-1 lg:col-span-2 p-2  border border-yellow-300 flex flex-col gap-3  justify-center items-center '>
+                <div className='grid grid-cols-2 lg:grid-cols-12 gap-4 place-content-start'>
+                    <div className='col-span-1 place-self-start lg:col-span-2 p-1 flex flex-col gap-3 justify-center items-center '>
+                        {
 
-                        <NavLink className="btn w-full text-md"> All </NavLink>
-                        <NavLink className="btn w-full text-md">Laptops</NavLink>
-                        <NavLink className="btn w-full text-md">Accessories</NavLink>
-                        <NavLink className="btn w-full text-md">Phones</NavLink>
-                        <NavLink className="btn w-full text-md"> Smart Watches</NavLink>
+                            categories.map(category => <NavLink key={category.id} to={`/category/${category.category}`} className={({ isActive }) => ` ${isActive ? 'btn w-full px-2 text-md bg-[#9538E2] text-white' : 'btn w-full text-md'}`} >{category.category}</NavLink>)
+
+                        }
+
+                        {/* <button onClick={() => handleCategory('ALL')} className='btn w-full ' > All </button>
+                        <button onClick={() => handleCategory('Laptops')} className='btn w-full '  >Laptops</button>
+                        <button onClick={() => handleCategory('Smartphones')} className='btn w-full '>Phones</button>
+                        <button onClick={() => handleCategory('Smart Watches')} className='btn w-full '> Smart Watches</button>
+                        <button onClick={() => handleCategory('Accessories')} className='btn w-full '>Accessories</button>
+                        <button onClick={() => handleCategory('tab')} className='btn w-full '> Tablet</button> */}
 
 
                     </div>
-                    <div className='col-span-1 lg:col-span-10 border border-blue-300'>google</div>
+                    <div className='col-span-1 lg:col-span-10 '>
+
+                        <Outlet></Outlet>
+                    </div>
                 </div>
             </div>
+
+
         </div>
     )
 }

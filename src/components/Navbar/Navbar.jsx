@@ -10,13 +10,12 @@ const Navbar = () => {
     </>
 
     const location = useLocation();
-    console.log(location.pathname)
-
+    // console.log(location.pathname.slice(1, 9))
 
     return (
         <div className='backdrop-blur-xl bg-white/50  p-2 border-2 border-blur-2xl relative' >
 
-            <div className={location.pathname == '/' ? 'bg-[#9538E2] text-white overflow-hidden rounded-2xl' : ''}>
+            <div className={(location.pathname == '/' || location.pathname.slice(1, 9) == 'category') ? 'bg-[#9538E2] text-white overflow-hidden rounded-2xl' : ''}>
                 <div className="navbar w-11/12 mx-auto px-0 py-4">
                     <div className="navbar-start">
                         <NavLink className=" text-xl font-bold lg:text-2xl">Gadget Heaven</NavLink>
@@ -69,7 +68,7 @@ const Navbar = () => {
                             <ul
                                 tabIndex={0}
                                 className="menu menu-sm dropdown-content bg-base-300 rounded-box z-[1] mt-3 w-52 p-2 border border-base-200 overflow-hidden shadow gap-3 right-0">
-                                <div className={location.pathname == '/' ? 'rounded-lg bg-[#9538E2] text-white overflow-hidden' : ''}>
+                                <div className={(location.pathname == '/' || location.pathname.slice(1, 9) == 'category') ? 'rounded-lg bg-[#9538E2] text-white overflow-hidden' : ''}>
 
                                     {links}
                                 </div>
@@ -80,7 +79,7 @@ const Navbar = () => {
 
                 {/* This is banner section */}
                 {
-                    location.pathname == '/' && <div>
+                    (location.pathname == '/' || location.pathname.slice(1, 9) == 'category') && <div>
                         <div className='w-11/12 mx-auto flex flex-col justify-center items-center px-1 pt-3 pb-5 lg:px-20 lg:pt-12 lg:pb-52 text-center space-y-2 lg:space-y-4'>
                             <h1 className='text-lg lg:text-4xl xl:text-5xl font-bold '>Upgrade Your Tech Accessorize with Gadget Heaven Accessories</h1>
                             <p className='text-gray-300 text-xs lg:text-md xl:text-lg'>Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!</p>
@@ -90,7 +89,7 @@ const Navbar = () => {
                 }
             </div>
             {
-                location.pathname == '/' && <div className='hidden lg:block w-7/12 mx-auto bg-white/50  p-2 border-2 border-blur-2xl rounded-xl  xl:h-96 absolute lg:-bottom-52  lg:left-52 xl:left-64'>
+                (location.pathname == '/' || location.pathname.slice(1, 9) == 'category') && <div className='hidden lg:block w-7/12 mx-auto bg-white/50  p-2 border-2 border-blur-2xl rounded-xl  xl:h-96 absolute lg:-bottom-52  lg:left-52 xl:left-64'>
                     <img src="https://i.ibb.co.com/fvFrDWn/banner.jpg" alt="" className='rounded-xl w-full h-full' />
                 </div>
             }
