@@ -10,7 +10,7 @@ const AllCards = () => {
     const [categoryData, setCategoryData] = useState([]);
 
     useEffect(() => {
-        if (category !== "ALL") {
+        if (category !== "ALL" && category) {
             const newData = [...data].filter(item => item.category === category);
             setCategoryData(newData);
         }
@@ -18,12 +18,16 @@ const AllCards = () => {
             console.log(category)
             setCategoryData(data);
         }
-        else {
+        else if (category === "Tab") {
             setCategoryData([])
+        }
+        else {
+            console.log("all")
+            setCategoryData(data)
         }
 
     }, [category, data])
-
+    console.log(category)
     console.log(data)
     console.log(categoryData)
 
