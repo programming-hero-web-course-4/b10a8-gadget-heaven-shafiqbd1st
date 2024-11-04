@@ -1,9 +1,12 @@
 import React from 'react'
+import { useLocation } from 'react-router-dom'
 
 const Footer = () => {
+    const location = useLocation();
+    const val = location.pathname.slice(1, 8);
     return (
-        <div>
-            <footer className="border border-red-400 footer bg-base-200 text-base-content p-10">
+        <div className={val == 'product' ? 'mt-40' : ''}>
+            <footer className="footer bg-base-200 text-base-content p-10">
                 <aside>
                     <svg
                         width="50"

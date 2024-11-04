@@ -10,13 +10,13 @@ const Navbar = () => {
     </>
 
     const location = useLocation();
-    // console.log(location.pathname.slice(1, 9))
+    console.log(location.pathname)
 
     return (
-        <div className='backdrop-blur-xl bg-white/50  p-2 border-2 border-blur-2xl relative' >
+        <div className='backdrop-blur-xl bg-white/50 p-4 border-2 border-blur-2xl relative' >
 
             <div className={(location.pathname == '/' || location.pathname.slice(1, 9) == 'category') ? 'bg-[#9538E2] text-white overflow-hidden rounded-2xl' : ''}>
-                <div className="navbar w-11/12 mx-auto px-0 py-4">
+                <div className="navbar w-11/12 mx-auto px-0 py-0">
                     <div className="navbar-start">
                         <NavLink className=" text-xl font-bold lg:text-2xl">Gadget Heaven</NavLink>
                     </div>
@@ -89,7 +89,7 @@ const Navbar = () => {
                 }
             </div>
             {
-                (location.pathname == '/' || location.pathname.slice(1, 9) == 'category') && <div className='hidden lg:block w-7/12 mx-auto bg-white/50  p-2 border-2 border-blur-2xl rounded-xl  xl:h-96 absolute lg:-bottom-52  lg:left-52 xl:left-64'>
+                (location.pathname == '/' || location.pathname.slice(1, 9) == 'category') && <div className='hidden lg:block w-7/12 mx-auto bg-white/50  p-2 border-2 border-blur-2xl rounded-xl   xl:h-96 absolute lg:-bottom-52  lg:left-52 xl:left-64'>
                     <img src="https://i.ibb.co.com/fvFrDWn/banner.jpg" alt="" className='rounded-xl w-full h-full' />
                 </div>
             }

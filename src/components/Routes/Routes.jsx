@@ -6,6 +6,7 @@ import Home from "../Home/Home";
 import Dashboard from "../Dashboard/Dashboard";
 import Statistics from "../Statistics/Statistics";
 import AllCards from "../AllCards/AllCards";
+import Details from "../Details/Details";
 
 const router = createBrowserRouter([
     {
@@ -27,8 +28,12 @@ const router = createBrowserRouter([
                         loader: () => fetch('../gadgetHeaven.json'),
                         element: <AllCards></AllCards>
                     }
-
                 ]
+            },
+            {
+                path: '/product-details/:Id',
+                loader: () => fetch('../gadgetHeaven.json'),
+                element: <Details></Details>
 
             },
             {
