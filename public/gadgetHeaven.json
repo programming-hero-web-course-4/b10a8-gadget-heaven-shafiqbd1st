@@ -21,7 +21,7 @@
         "product_title": "Samsung Galaxy S23 Ultra",
         "product_image": "https://gurbuzgrup.com/uploads/2023/02/samsung-s23-ultra-1.webp",
         "category": "Smartphones",
-        "price": 1199,
+        "price": 119,
         "description": "A premium smartphone with high-resolution camera and dynamic AMOLED display.",
         "specification": [
             "6.8-inch Dynamic AMOLED 2X display",
@@ -123,7 +123,7 @@
         "product_title": "Sony WH-1000XM5",
         "product_image": "https://www.sonysmart.com.bd/public/uploads/all/hbi1tSSAMIq58Udv6gTOiPJ0oXtCJJKqZutdPkPR.jpg",
         "category": "Accessories",
-        "price": 399,
+        "price": 394,
         "description": "Industry-leading noise-canceling headphones with crystal-clear sound.",
         "specification": [
             "30-hour battery life",
@@ -140,7 +140,7 @@
         "product_title": "HP Spectre x360",
         "product_image": "https://computermania-bd.b-cdn.net/wp-content/uploads/HP-Spectre-x360-15-Price-in-BD.jpg",
         "category": "Laptops",
-        "price": 1399,
+        "price": 1099,
         "description": "High-performance 2-in-1 laptop with stunning design and features.",
         "specification": [
             "13.3-inch FHD display",
@@ -157,7 +157,7 @@
         "product_title": "Google Pixel 7 Pro",
         "product_image": "https://kryinternational.com/wp-content/uploads/2024/06/Google-Pixel-7-Used-Price-in-Bangladesh.jpg",
         "category": "Smartphones",
-        "price": 899,
+        "price": 809,
         "description": "Google's flagship phone with the latest Android features and camera quality.",
         "specification": [
             "6.7-inch QHD+ display",
@@ -174,7 +174,7 @@
         "product_title": "Lenovo ThinkPad X1",
         "product_image": "https://aroz.com.bd/wp-content/uploads/2022/10/lenovo-laptops-x1-carbon-6th-gen-hero.webp",
         "category": "Laptops",
-        "price": 1499,
+        "price": 1409,
         "description": "Business-class laptop with durable build and high performance.",
         "specification": [
             "14-inch FHD display",
@@ -191,7 +191,7 @@
         "product_title": "Huawei MateBook X Pro",
         "product_image": "https://technave.com/data/files/article/202208260218088570.jpg",
         "category": "Laptops",
-        "price": 1299,
+        "price": 1799,
         "description": "High-performance ultrabook with immersive display and compact design.",
         "specification": [
             "13.9-inch 3K display",
@@ -208,7 +208,7 @@
         "product_title": "OnePlus 11",
         "product_image": "https://www.notebookcheck.net/fileadmin/Notebooks/News/_nc3/OnePlus_10T_4.jpg",
         "category": "Smartphones",
-        "price": 699,
+        "price": 609,
         "description": "High-performance smartphone with fast charging and smooth display.",
         "specification": [
             "6.7-inch 120Hz AMOLED display",
@@ -225,7 +225,7 @@
         "product_title": "Sony Xperia 1 V",
         "product_image": "https://www.chargerlab.com/wp-content/uploads/2023/05/2023053102131966.png",
         "category": "Smartphones",
-        "price": 999,
+        "price": 94,
         "description": "Advanced smartphone with 4K display and professional-grade camera.",
         "specification": [
             "6.5-inch 4K HDR OLED display",
@@ -242,7 +242,7 @@
         "product_title": "Microsoft Surface ",
         "product_image": "https://static.bhphoto.com/images/images500x500/1666362913_1729186.jpg",
         "category": "Laptops",
-        "price": 1299,
+        "price": 294,
         "description": "Sleek and powerful laptop with a high-resolution PixelSense display.",
         "specification": [
             "13.5-inch PixelSense display",
@@ -277,7 +277,7 @@
         "product_title": "Amazon Echo Dot",
         "product_image": "https://reviewcentralme.com/wp-content/uploads/2022/12/Amazon-Echo-Dot-5th-generation-review-1.jpg",
         "category": "Accessories",
-        "price": 49,
+        "price": 439,
         "description": "Compact smart speaker with Alexa for hands-free control.",
         "specification": [
             "Alexa voice assistant",

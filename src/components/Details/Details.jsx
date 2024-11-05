@@ -1,15 +1,19 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import { useLoaderData, useParams } from 'react-router-dom'
 import { FaStar } from "react-icons/fa6";
 import { FaStarHalfAlt } from "react-icons/fa";
 import { FaCartShopping } from "react-icons/fa6";
 import { CiHeart } from "react-icons/ci";
+
+import { MainContext } from '../MainProvider/MainProvider'
+
 const Details = props => {
     const { Id } = useParams();
     const data = useLoaderData()
 
     const [product, setProduct] = useState({});
+
     useEffect(() => {
         const newProduct = data.find(item => item.product_id == Id);
         setProduct(newProduct)
@@ -19,7 +23,6 @@ const Details = props => {
         product_id,
         product_title,
         product_image,
-        category,
         price,
         description,
         specification,
@@ -27,7 +30,32 @@ const Details = props => {
         rating
     } = product;
 
+    const { cart, setCart, wish, setWish, notify } = useContext(MainContext);
+    const [active, setActive] = useState(false);
+
+    const addToCart = product => {
+
+        const newCart = cart.find(p => p == product)
+        if (newCart) {
+
+            notify('error', "cart already added")
+        } else {
+            setCart([...cart, product]);
+            notify('success', 'cart add successfully')
+        }
+    }
+    const addToWishList = product => {
+
+        notify('success', 'This cart add successfully wish list')
+        setWish([...wish, product]);
+        setActive(!active)
+    }
+
+
+
+
     return (
+
         <div className='relative bg-[#9538E2] w-11/12 rounded-lg mx-auto mb-20'>
             <div className='w-11/12 mx-auto flex flex-col justify-center items-center px-1 pt-3 pb-5 lg:px-20 lg:pt-12 lg:pb-52 text-center space-y-2 lg:space-y-4 '>
                 <h1 className='text-lg lg:text-4xl xl:text-5xl font-bold text-white'>Product Details</h1>
@@ -61,8 +89,8 @@ const Details = props => {
                     <p className='flex items-center gap-3 '>Raging: <span className='ml-2 text-yellow-300 flex'><FaStar /><FaStar /><FaStar /><FaStar /><FaStarHalfAlt /> </span > <button className="btn btn-xs text-lg"> {rating} </button> </p>
 
                     <div className='flex gap-3'>
-                        <button className="btn bg-[#9538E2] text-white rounded-xl">Add to Cart <span className='ml-1 text-lg'><FaCartShopping /></span></button>
-                        <button className="btn btn-md bg-white  rounded-full"><span className='text-lg'><CiHeart /></span></button>
+                        <button onClick={() => addToCart(product)} className="btn bg-[#9538E2] text-white rounded-xl">Add to Cart <span className='ml-1 text-lg'><FaCartShopping /></span></button>
+                        <button disabled={active} onClick={() => addToWishList(product)} className="btn btn-md bg-white  rounded-full "><span className='text-lg'><CiHeart /></span></button>
                     </div>
                 </div>
             </div>

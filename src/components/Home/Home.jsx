@@ -6,24 +6,6 @@ import AllCards from '../AllCards/AllCards';
 const Home = () => {
 
     const categories = useLoaderData();
-    // const [category, setCategory] = useState(data);
-
-    // const handleCategory = (item) => {
-    //     console.log(item)
-    //     const tempData = [...data].filter(d => d.category == item);
-    //     console.log(tempData.length)
-    //     if (tempData.length > 0) {
-    //         console.log('object')
-    //         setCategory(tempData);
-    //     }
-    //     else if (item == 'ALL') {
-    //         setCategory(data);
-    //     }
-    //     else {
-    //         setCategory([]);
-    //     }
-    // }
-
 
     return (
         <div className='w-11/12 mx-auto mt-5 lg:mt-64 pb-5'>

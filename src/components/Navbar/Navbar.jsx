@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import PropTypes from 'prop-types'
 import { NavLink, useLocation } from 'react-router-dom'
+import { MainContext } from '../MainProvider/MainProvider'
 
 const Navbar = () => {
+    const { cart, wish } = useContext(MainContext);
+    // console.log(cart.length);
     const links = <>
         <li><NavLink to='/' className={({ isActive }) => ` text-lg ${isActive ? 'underline underline-offset-4' : ''}`}>Home</NavLink></li>
         <li><NavLink to='/statistics' className={({ isActive }) => ` text-lg ${isActive ? 'underline underline-offset-4' : ''}`}>Statistics</NavLink></li>
@@ -10,12 +13,12 @@ const Navbar = () => {
     </>
 
     const location = useLocation();
-    console.log(location.pathname)
+    // console.log(location.pathname)
 
     return (
-        <div className='backdrop-blur-xl bg-white/50 p-4 border-2 border-blur-2xl relative' >
+        <div className='backdrop-blur-xl bg-white/50 p-3 border-2 border-blur-2xl relative' >
 
-            <div className={(location.pathname == '/' || location.pathname.slice(1, 9) == 'category') ? 'bg-[#9538E2] text-white overflow-hidden rounded-2xl' : ''}>
+            <div className={(location.pathname == '/' || location.pathname.slice(1, 9) == 'category') ? 'pt-3 bg-[#9538E2] text-white overflow-hidden rounded-2xl' : 'pt-3'}>
                 <div className="navbar w-11/12 mx-auto px-0 py-0">
                     <div className="navbar-start">
                         <NavLink className=" text-xl font-bold lg:text-2xl">Gadget Heaven</NavLink>
@@ -27,23 +30,23 @@ const Navbar = () => {
                     </div>
                     <div className="navbar-end">
                         <div className='space-x-2'>
-                            <div tabIndex={0} role="button" className="btn btn-ghost btn-circle bg-base-300 ">
+                            <div tabIndex={0} role="button" className="btn btn-ghost btn-circle bg-base-300 mr-3">
                                 <div className="indicator">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-5 lg:size-6">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-5 lg:size-8">
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
                                     </svg>
 
-                                    <span className="badge badge-sm indicator-item">0</span>
+                                    <span className="badge badge-2xl indicator-item text-lg py-4">{cart.length}</span>
                                 </div>
 
                             </div>
                             <div tabIndex={0} role="button" className="btn btn-ghost btn-circle bg-base-300">
                                 <div className="indicator">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className=" size-5 lg:size-6">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className=" size-5 lg:size-8 ">
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
                                     </svg>
 
-                                    <span className="badge badge-sm indicator-item">0</span>
+                                    <span className="badge badge-2xl indicator-item text-lg py-4">{wish.length} </span>
                                 </div>
 
                             </div>
