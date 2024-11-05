@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import { useLoaderData, useParams } from 'react-router-dom'
-
+import { FaStar } from "react-icons/fa6";
+import { FaStarHalfAlt } from "react-icons/fa";
+import { FaCartShopping } from "react-icons/fa6";
+import { CiHeart } from "react-icons/ci";
 const Details = props => {
     const { Id } = useParams();
     const data = useLoaderData()
@@ -25,36 +28,43 @@ const Details = props => {
     } = product;
 
     return (
-        <div className='relative bg-[#9538E2] w-full mb-20'>
+        <div className='relative bg-[#9538E2] w-11/12 rounded-lg mx-auto mb-20'>
             <div className='w-11/12 mx-auto flex flex-col justify-center items-center px-1 pt-3 pb-5 lg:px-20 lg:pt-12 lg:pb-52 text-center space-y-2 lg:space-y-4 '>
                 <h1 className='text-lg lg:text-4xl xl:text-5xl font-bold text-white'>Product Details</h1>
                 <p className='text-gray-300 text-xs lg:text-md xl:text-lg'>Explore our tech collection: high-performance laptops, smartwatches, mobile phones, and accessories designed to enhance productivity, connectivity, and style.</p>
             </div>
 
-            <div className='w-7/12 mx-auto  bg-white/50  p-2 border-2 border-blur-2xl rounded-xl xl:h-96 absolute lg:-bottom-52  lg:left-52 xl:left-64  border-red-500'>
-                <div className='flex justify-center gap-4 bg-base-300'>
-                    <div className='flex-1 h-[350px]'>
-                        <img src={product_image} alt="" className=' h-full rounded-xl' />
-                    </div>
-                    <div className='flex-1'>
-                        <h1>{product_title}</h1>
-                        <p>Price: $ {price}</p>
-                        <button className="btn bg-green-300 border border-green-500 rounded-full ">In Stock</button>
-                        <p className='text-slate-400'>{description}</p>
-                        <h3 className='font-bold'>Specification:</h3>
-                        <ul>
-                            {specification && specification.length > 0 ? (
-                                specification.map((spec, index) => (
-                                    <li key={index} className='list-decimal list-inside'>{spec}</li>
-                                ))
-                            ) : (
-                                <li>No specification available</li>
-                            )}
+            <div className='w-8/12 h-[500px]  mx-auto grid grid-cols-12 border-2 border-[#9538E2] absolute -bottom-80 left-52 p-3 rounded-xl  bg-white/50 '>
 
-                        </ul>
-                    </div>
+                <div className='col-span-5 h-[450px] flex justify-center items-center bg-base-100 rounded-xl p-3'>
+                    <img className='h-full rounded-xl' src={product_image} alt="" />
                 </div>
 
+                <div className='col-span-7  bg-base-200 rounded-xl p-3 flex flex-col items-start justify-between '>
+
+                    <h1>{product_title}</h1>
+                    <p>Price: $ {price}</p>
+                    <button className="btn btn-xs bg-green-300 border border-green-500 rounded-full">{availability ? 'In Stock' : 'Out of Stock'}</button>
+
+                    <p className='text-slate-600'>{description}</p>
+                    <h3 className='font-bold'>Specification:</h3>
+                    <ul>
+                        {specification && specification.length > 0 ? (
+                            specification.map((spec, index) => (
+                                <li key={index} className='list-decimal list-inside'>{spec}</li>
+                            ))
+                        ) : (
+                            <li>No specification available</li>
+                        )}
+
+                    </ul>
+                    <p className='flex items-center gap-3 '>Raging: <span className='ml-2 text-yellow-300 flex'><FaStar /><FaStar /><FaStar /><FaStar /><FaStarHalfAlt /> </span > <button className="btn btn-xs text-lg"> {rating} </button> </p>
+
+                    <div className='flex gap-3'>
+                        <button className="btn bg-[#9538E2] text-white rounded-xl">Add to Cart <span className='ml-1 text-lg'><FaCartShopping /></span></button>
+                        <button className="btn btn-md bg-white  rounded-full"><span className='text-lg'><CiHeart /></span></button>
+                    </div>
+                </div>
             </div>
 
         </div>

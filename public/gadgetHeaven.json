@@ -2,7 +2,7 @@
     {
         "product_id": 1,
         "product_title": "Apple iPhone 15 Pro Max",
-        "product_image": "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-15-pro-max-1.jpg",
+        "product_image": "https://images.pexels.com/photos/16004744/pexels-photo-16004744/free-photo-of-apple-iphone-14-pro-max-mobile-phone.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "category": "Smartphones",
         "price": 1299,
         "description": "Experience the ultimate smartphone with the iPhone 15 Pro Max.",
@@ -47,7 +47,7 @@
             "512GB SSD",
             "Intel Iris Xe Graphics"
         ],
-        "availability": true,
+        "availability": false,
         "rating": 4.5
     },
     {
@@ -98,7 +98,7 @@
             "GPS and NFC support",
             "Up to 40 hours battery life"
         ],
-        "availability": true,
+        "availability": false,
         "rating": 4.6
     },
     {
@@ -149,7 +149,7 @@
             "1TB SSD",
             "Convertible design"
         ],
-        "availability": true,
+        "availability": false,
         "rating": 4.6
     },
     {
@@ -183,7 +183,7 @@
             "512GB SSD",
             "Carbon fiber chassis"
         ],
-        "availability": true,
+        "availability": false,
         "rating": 4.7
     },
     {
