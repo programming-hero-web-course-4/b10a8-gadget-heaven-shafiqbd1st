@@ -21,17 +21,17 @@ const MainProvider = ({ children }) => {
       toast.error(`${message}`)
 
   };
-  const addToCart = product => {
+  // const addToCart = product => {
 
-    const newCart = cart.find(p => p == product)
-    if (newCart) {
+  //   const newCart = cart.find(p => p == product)
+  //   if (newCart) {
 
-      notify('error', "cart already added")
-    } else {
-      setCart([...cart, product]);
-      notify('success', 'cart add successfully')
-    }
-  }
+  //     notify('error', "cart already added")
+  //   } else {
+  //     setCart([...cart, product]);
+  //     notify('success', 'cart add successfully')
+  //   }
+  // }
 
   // const addToWishList = product => {
 
@@ -67,7 +67,7 @@ const MainProvider = ({ children }) => {
     cost, setCost,
     brand, setBrand,
     // active,
-    addToCart,
+    // addToCart,
     // addToWishList,
   }
 

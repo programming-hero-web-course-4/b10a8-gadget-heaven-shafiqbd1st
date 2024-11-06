@@ -16,13 +16,20 @@ const Details = props => {
 
     const { Id } = useParams();
     const data = useLoaderData()
-
+    const [active, setActive] = useState(false);
     const [product, setProduct] = useState({});
 
     useEffect(() => {
         const newProduct = data.find(item => item.product_id == Id);
         setProduct(newProduct)
     }, [data, Id])
+
+    useEffect(() => {
+        const newProduct = wish.find(item => item.product_id == Id);
+        if (newProduct) {
+            setActive(!active)
+        }
+    }, [])
 
     const {
         product_id,
@@ -35,25 +42,24 @@ const Details = props => {
         rating
     } = product;
 
-    const { cart, setCart, wish, setWish, notify, addToCart } = useContext(MainContext);
+    const { cart, setCart, wish, setWish, notify } = useContext(MainContext);
 
-    const [active, setActive] = useState(false);
 
-    // const addToCart = product => {
 
-    //     const newCart = cart.find(p => p == product)
-    //     if (newCart) {
+    const addToCart = pr => {
+        const newCart = cart.find(p => p.product_id == pr.product_id)
+        if (newCart) {
 
-    //         notify('error', "cart already added")
-    //     } else {
-    //         setCart([...cart, product]);
-    //         notify('success', 'cart add successfully')
-    //     }
-    // }
-    const addToWishList = product => {
+            notify('error', "cart already added")
+        } else {
+            setCart([...cart, pr]);
+            notify('success', 'cart add successfully')
+        }
+    }
 
+    const addToWishList = pr => {
         notify('success', 'This cart add successfully wish list')
-        setWish([...wish, product]);
+        setWish([...wish, pr]);
         setActive(!active)
     }
 

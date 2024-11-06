@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from 'react'
 import PropTypes from 'prop-types'
-import { NavLink, useLocation } from 'react-router-dom'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 import { MainContext } from '../MainProvider/MainProvider'
 
 const Navbar = () => {
@@ -89,7 +89,7 @@ const Navbar = () => {
                         <div className='w-11/12 mx-auto flex flex-col justify-center items-center px-1 pt-3 pb-5 lg:px-20 lg:pt-12 lg:pb-52 text-center space-y-2 lg:space-y-4'>
                             <h1 className='text-lg lg:text-4xl xl:text-5xl font-bold '>Upgrade Your Tech Accessorize with Gadget Heaven Accessories</h1>
                             <p className='text-gray-300 text-xs lg:text-md xl:text-lg'>Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!</p>
-                            <button className="btn rounded-full">Shop Now</button>
+                            <Link to='/dashboard' className="btn rounded-full">Shop Now</Link>
                         </div>
                     </div>
                 }

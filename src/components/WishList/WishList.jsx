@@ -30,7 +30,7 @@ const WishList = ({ p }) => {
                             <h2 className='text-md font-bold ml-1'>{product_title}</h2>
                             <h2 className='text-gray-400 ml-1'>{description}</h2>
                             <h2 className='font-bold text-xs ml-1'>Price: ${price}</h2>
-                            <button onClick={() => addToCart(p)} className="btn bg-[#9538E2] text-white rounded-xl btn-md ">Add to Cart</button>
+                            <button className="btn bg-[#9538E2] text-white rounded-xl btn-md ">Add to Cart</button>
                         </div>
                     </div>
 
