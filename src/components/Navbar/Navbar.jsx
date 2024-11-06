@@ -24,7 +24,7 @@ const Navbar = () => {
             <div className={(location.pathname == '/' || location.pathname.slice(1, 9) == 'category') ? 'pt-3 bg-[#9538E2] text-white overflow-hidden rounded-2xl' : 'pt-3'}>
                 <div className="navbar w-11/12 mx-auto px-0 py-0">
                     <div className="navbar-start">
-                        <NavLink className={location.pathname !== '/' ? " text-xl font-bold lg:text-2xl text-[#9538E2]" : 'text-xl font-bold lg:text-2xl'}>Gadget Heaven</NavLink>
+                        <NavLink className={(location.pathname == '/' || location.pathname.slice(1, 9) == 'category') ? " text-xl  font-bold lg:text-2xl" : 'text-xl font-bold lg:text-2xl text-[#9538E2]'}>Gadget Heaven</NavLink>
                     </div>
                     <div className="navbar-center hidden lg:flex">
                         <ul className="menu menu-horizontal px-1 gap-3">
