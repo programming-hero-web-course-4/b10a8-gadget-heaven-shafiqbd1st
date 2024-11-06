@@ -20,24 +20,24 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '/',
-                loader: () => fetch('../categories.json'),
+                loader: () => fetch('/categories.json'),
                 element: <Home></Home>,
                 children: [
                     {
                         path: '/',
-                        loader: () => fetch('../gadgetHeaven.json'),
+                        loader: () => fetch('/gadgetHeaven.json'),
                         element: <AllCards></AllCards>
                     },
                     {
                         path: '/category/:category',
-                        loader: () => fetch('../gadgetHeaven.json'),
+                        loader: () => fetch('/gadgetHeaven.json'),
                         element: <AllCards></AllCards>
                     }
                 ]
             },
             {
                 path: '/product-details/:Id',
-                loader: () => fetch('../gadgetHeaven.json'),
+                loader: () => fetch('/gadgetHeaven.json'),
                 element: <Details></Details>
 
             },
