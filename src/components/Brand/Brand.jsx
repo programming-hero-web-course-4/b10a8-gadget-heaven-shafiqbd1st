@@ -15,7 +15,7 @@ const Brand = ({ b }) => {
                     <h2 className="card-title">{name} </h2>
                     <p> {description} </p>
                     <div className="card-actions justify-end">
-                        <Link to={link} className="btn bg-[#9538E2] rounded-xl text-white">Details</Link>
+                        <Link to={link} target="_blank" rel="noopener noreferrer" className="btn bg-[#9538E2] rounded-xl text-white">Details</Link>
                     </div>
                 </div>
             </div>

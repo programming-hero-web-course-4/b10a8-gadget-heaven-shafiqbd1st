@@ -32,7 +32,7 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <div className="navbar-end">
-                        <div className='space-x-2'>
+                        <div className='flex'>
                             <div tabIndex={0} role="button" className="btn btn-ghost btn-circle bg-base-300 mr-3">
                                 <div className="indicator">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-5 lg:size-8">

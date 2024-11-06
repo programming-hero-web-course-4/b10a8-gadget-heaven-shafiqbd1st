@@ -8,7 +8,7 @@ import { CiHeart } from "react-icons/ci";
 import Stars from 'react-stars';
 import { MainContext } from '../MainProvider/MainProvider'
 
-const Details = props => {
+const Details = () => {
 
     useEffect(() => {
         document.title = 'product-details'
