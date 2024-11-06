@@ -1,20 +1,29 @@
-import React, { createContext, useContext, useState } from 'react'
+import React, { createContext, useContext, useEffect, useRef, useState } from 'react'
 import PropTypes from 'prop-types'
 import { MainContext } from '../MainProvider/MainProvider'
 import Cart from '../Cart/Cart';
 import WishList from '../WishList/WishList';
 import { HiAdjustments } from "react-icons/hi";
+import { Link, useNavigate } from 'react-router-dom';
 
 const Dashboard = () => {
     const {
         cart, setCart,
         wish, setWish,
         data, setData,
-        cost,
+        cost, setCost,
 
     } = useContext(MainContext);
 
     const [active, setActive] = useState({ cart: true });
+
+    const [pActive, setPActive] = useState(false);
+
+    useEffect(() => {
+        if (cart.length == 0) {
+            setPActive(true);
+        }
+    }, [cart.length])
 
     const activeBtn = (value) => {
         if (value == 'cart') {
@@ -31,9 +40,20 @@ const Dashboard = () => {
         setSortCart(temp);
     }
 
+    const modalRef = useRef(null)
+
+    const purchase = () => {
+        modalRef.current.showModal();
+    };
 
 
-    console.log(active.cart)
+    const closeModal = () => {
+        setCart([]);
+        setCost(0);
+        modalRef.current.close();
+    };
+
+
     return (
         <div className=' w-11/12 mx-auto mb-10' >
             <div className='bg-[#9538E2] rounded-lg'>
@@ -52,22 +72,41 @@ const Dashboard = () => {
                     active.cart ? <div className='flex justify-between items-center py-5 px-2'>
                         <div className='text-xl font-bold'>Cart</div>
                         <div className='flex justify-end items-center gap-4'>
-                            <h1 className='text-xl font-bold mr-10'>Total cost: ${cost} </h1>
+                            <h1 className='text-xl font-bold mr-10'>Total cost: $ {cost} </h1>
                             <button onClick={() => sortCartData()} className="btn text-lg hover:bg-[#9538E2] rounded-full hover:text-white">Sort by Price <span><HiAdjustments /></span> </button>
-                            <button className="btn text-lg hover:bg-[#9538E2] rounded-full hover:text-white">Purchase</button>
+                            <button onClick={() => purchase()} disabled={pActive} className="btn text-lg hover:bg-[#9538E2] rounded-full hover:text-white">Purchase</button>
+
                         </div>
                     </div>
                         : <div className='text-xl font-bold  py-5 px-2'>Wish List</div>
                 }
             </div>
             <div>
-
-
                 {
                     active.cart ? sortCart.map((p, id) => <Cart key={id} p={p}></Cart>) : wish.map((p, id) => <WishList key={id} p={p}></WishList>)
-
                 }
             </div>
+
+
+            <dialog ref={modalRef} id="my_modal_5" className="modal modal-bottom sm:modal-middle">
+                <div className="modal-box">
+                    <div className='flex flex-col justify-center items-center gap-4 text-center'>
+                        <img src="https://i.ibb.co.com/1LLhJ63/Group.png" alt="" />
+                        <h3 className="font-bold text-lg">Payment Successfully!</h3>
+                        <p>Thanks for purchasing.</p>
+                        <p>Total: $ {cost} </p>
+                    </div>
+                    <div className="modal-action flex-col">
+                        <Link to="/"
+                            onClick={closeModal}
+                            className="btn w-full px-4"
+                        >
+                            Close
+                        </Link>
+                    </div>
+                </div>
+            </dialog>
+
         </div>
     )
 }

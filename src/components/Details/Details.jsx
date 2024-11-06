@@ -31,6 +31,7 @@ const Details = props => {
     } = product;
 
     const { cart, setCart, wish, setWish, notify } = useContext(MainContext);
+
     const [active, setActive] = useState(false);
 
     const addToCart = product => {
@@ -90,7 +91,7 @@ const Details = props => {
 
                     <div className='flex gap-3'>
                         <button onClick={() => addToCart(product)} className="btn bg-[#9538E2] text-white rounded-xl">Add to Cart <span className='ml-1 text-lg'><FaCartShopping /></span></button>
-                        <button disabled={active} onClick={() => addToWishList(product)} className="btn btn-md bg-white  rounded-full "><span className='text-lg'><CiHeart /></span></button>
+                        <button disabled={active} onClick={() => addToWishList(product)} className="btn btn-md bg-white  rounded-full hover:bg-red-400 "><span className='text-lg'><CiHeart /></span></button>
                     </div>
                 </div>
             </div>

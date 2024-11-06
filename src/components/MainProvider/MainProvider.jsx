@@ -39,7 +39,7 @@ const MainProvider = ({ children }) => {
     data, setData,
     wish, setWish,
     notify,
-    cost,
+    cost, setCost,
   }
 
   return (
