@@ -1,46 +1,13 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { Bar, BarChart, CartesianGrid, Legend, Tooltip, XAxis, YAxis } from 'recharts'
 import { MainContext } from '../MainProvider/MainProvider'
 const Statistics = props => {
     const { data } = useContext(MainContext);
-    // const data = [
-    //     {
-    //         "name": "Page A",
-    //         "uv": 4000,
-    //         "pv": 2400
-    //     },
-    //     {
-    //         "name": "Page B",
-    //         "uv": 3000,
-    //         "pv": 1398
-    //     },
-    //     {
-    //         "name": "Page C",
-    //         "uv": 2000,
-    //         "pv": 9800
-    //     },
-    //     {
-    //         "name": "Page D",
-    //         "uv": 2780,
-    //         "pv": 3908
-    //     },
-    //     {
-    //         "name": "Page E",
-    //         "uv": 1890,
-    //         "pv": 4800
-    //     },
-    //     {
-    //         "name": "Page F",
-    //         "uv": 2390,
-    //         "pv": 3800
-    //     },
-    //     {
-    //         "name": "Page G",
-    //         "uv": 3490,
-    //         "pv": 4300
-    //     }
-    // ]
+
+    useEffect(() => {
+        document.title = 'statistics'
+    }, [])
 
     return (
         <div className='w-11/12 mx-auto mb-4  bg-base-200 rounded-lg'>

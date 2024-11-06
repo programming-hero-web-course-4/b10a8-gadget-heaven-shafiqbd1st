@@ -7,6 +7,9 @@ import { HiAdjustments } from "react-icons/hi";
 import { Link, useNavigate } from 'react-router-dom';
 
 const Dashboard = () => {
+    useEffect(() => {
+        document.title = 'dashboard'
+    }, [])
     const {
         cart, setCart,
         wish, setWish,

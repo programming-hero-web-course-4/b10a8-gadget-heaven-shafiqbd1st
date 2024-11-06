@@ -5,10 +5,15 @@ import { FaStar } from "react-icons/fa6";
 import { FaStarHalfAlt } from "react-icons/fa";
 import { FaCartShopping } from "react-icons/fa6";
 import { CiHeart } from "react-icons/ci";
-
+import Stars from 'react-stars';
 import { MainContext } from '../MainProvider/MainProvider'
 
 const Details = props => {
+
+    useEffect(() => {
+        document.title = 'product-details'
+    }, [])
+
     const { Id } = useParams();
     const data = useLoaderData()
 
@@ -30,21 +35,21 @@ const Details = props => {
         rating
     } = product;
 
-    const { cart, setCart, wish, setWish, notify } = useContext(MainContext);
+    const { cart, setCart, wish, setWish, notify, addToCart } = useContext(MainContext);
 
     const [active, setActive] = useState(false);
 
-    const addToCart = product => {
+    // const addToCart = product => {
 
-        const newCart = cart.find(p => p == product)
-        if (newCart) {
+    //     const newCart = cart.find(p => p == product)
+    //     if (newCart) {
 
-            notify('error', "cart already added")
-        } else {
-            setCart([...cart, product]);
-            notify('success', 'cart add successfully')
-        }
-    }
+    //         notify('error', "cart already added")
+    //     } else {
+    //         setCart([...cart, product]);
+    //         notify('success', 'cart add successfully')
+    //     }
+    // }
     const addToWishList = product => {
 
         notify('success', 'This cart add successfully wish list')
@@ -87,7 +92,17 @@ const Details = props => {
                         )}
 
                     </ul>
-                    <p className='flex items-center gap-3 '>Raging: <span className='ml-2 text-yellow-300 flex'><FaStar /><FaStar /><FaStar /><FaStar /><FaStarHalfAlt /> </span > <button className="btn btn-xs text-lg"> {rating} </button> </p>
+                    {/* <FaStar />
+                    <p className='flex items-center gap-3 '>Raging: <span className='ml-2 text-yellow-300 flex'>
+
+                        <FaStarHalfAlt /> </span > <button className="btn btn-xs text-lg"> {rating} </button> </p> */}
+                    <p className='flex items-center gap-3 '>Raging:  <Stars
+                        count={5}
+                        value={rating}
+                        size={24}
+                        half={true} // Enables half-stars
+                        color2={"#ffd700"}
+                    /> <button className="btn btn-xs text-lg"> {rating} </button> </p>
 
                     <div className='flex gap-3'>
                         <button onClick={() => addToCart(product)} className="btn bg-[#9538E2] text-white rounded-xl">Add to Cart <span className='ml-1 text-lg'><FaCartShopping /></span></button>

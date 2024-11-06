@@ -1,10 +1,13 @@
-import React, { useState } from 'react'
-import { NavLink, Outlet, useLoaderData } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { NavLink, Outlet, useLoaderData, useLocation } from 'react-router-dom'
 import Card from '../Card/Card';
 import AllCards from '../AllCards/AllCards';
 
 const Home = () => {
 
+    useEffect(() => {
+        document.title = 'home'
+    }, [])
     const categories = useLoaderData();
 
     return (

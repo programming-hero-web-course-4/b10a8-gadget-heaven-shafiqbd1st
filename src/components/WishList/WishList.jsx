@@ -14,20 +14,10 @@ const WishList = ({ p }) => {
         availability,
         rating
     } = p;
-    const { cart, setCart, wish, setWish, notify } = useContext(MainContext)
+
+    const { cart, setCart, wish, setWish, notify, addToCart } = useContext(MainContext)
 
 
-    const addToCart = product => {
-
-        const newCart = cart.find(p => p == product)
-        if (newCart) {
-
-            notify('error', "cart already added")
-        } else {
-            setCart([...cart, product]);
-            notify('success', 'cart add successfully')
-        }
-    }
     return (
         <div>
             <div className='px-3'>

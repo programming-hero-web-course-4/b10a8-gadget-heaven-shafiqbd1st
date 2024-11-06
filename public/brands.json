@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "name": "Google",
+        "logo": "https://logo.clearbit.com/google.com",
+        "description": "Leading technology company specializing in search engines.",
+        "link": "https://www.google.com"
+    },
+    {
+        "id": 2,
+        "name": "Apple",
+        "logo": "https://logo.clearbit.com/apple.com",
+        "description": "Innovative company famous for its iPhones and Macs.",
+        "link": "https://www.apple.com"
+    },
+    {
+        "id": 3,
+        "name": "Microsoft",
+        "logo": "https://logo.clearbit.com/microsoft.com",
+        "description": "Technology giant known for Windows OS and Office Suite.",
+        "link": "https://www.microsoft.com"
+    },
+    {
+        "id": 4,
+        "name": "Amazon",
+        "logo": "https://logo.clearbit.com/amazon.com",
+        "description": "Global e-commerce leader offering wide range of products.",
+        "link": "https://www.amazon.com"
+    },
+    {
+        "id": 5,
+        "name": "Samsung",
+        "logo": "https://logo.clearbit.com/samsung.com",
+        "description": "South Korean company leading in electronics and appliances.",
+        "link": "https://www.samsung.com"
+    },
+    {
+        "id": 6,
+        "name": "Sony",
+        "logo": "https://logo.clearbit.com/sony.com",
+        "description": "Japanese company renowned for entertainment and electronics.",
+        "link": "https://www.sony.com"
+    },
+    {
+        "id": 7,
+        "name": "Dell Technologies",
+        "logo": "https://logo.clearbit.com/dell.com",
+        "description": "Known for its computers, servers, and storage solutions.",
+        "link": "https://www.dell.com"
+    },
+    {
+        "id": 8,
+        "name": "Lenovo",
+        "logo": "https://logo.clearbit.com/lenovo.com",
+        "description": "Chinese multinational known for laptops and devices.",
+        "link": "https://www.lenovo.com"
+    },
+    {
+        "id": 9,
+        "name": "Huawei",
+        "logo": "https://logo.clearbit.com/huawei.com",
+        "description": "Leading provider of networking and telecommunications equipment.",
+        "link": "https://www.huawei.com"
+    },
+    {
+        "id": 10,
+        "name": "OnePlus",
+        "logo": "https://logo.clearbit.com/oneplus.com",
+        "description": "Smartphone brand popular for flagship-grade features.",
+        "link": "https://www.oneplus.com"
+    }
+]

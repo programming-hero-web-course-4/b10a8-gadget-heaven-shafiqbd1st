@@ -7,11 +7,16 @@ import Dashboard from "../Dashboard/Dashboard";
 import Statistics from "../Statistics/Statistics";
 import AllCards from "../AllCards/AllCards";
 import Details from "../Details/Details";
+import ErrorPage from "../ErrorPage/ErrorPage";
+import Navbar from "../Navbar/Navbar";
+import Footer from "../Footer/Footer";
+import Brands from "../Brands/Brands";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <MainLayout></MainLayout>,
+        errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
                 path: '/',
@@ -43,6 +48,10 @@ const router = createBrowserRouter([
             {
                 path: '/dashboard',
                 element: <Dashboard></Dashboard>
+            },
+            {
+                path: '/Brand',
+                element: <Brands></Brands>
             }
 
         ]

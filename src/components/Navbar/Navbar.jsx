@@ -1,15 +1,18 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { NavLink, useLocation } from 'react-router-dom'
 import { MainContext } from '../MainProvider/MainProvider'
 
 const Navbar = () => {
     const { cart, wish } = useContext(MainContext);
+
+
     // console.log(cart.length);
     const links = <>
         <li><NavLink to='/' className={({ isActive }) => ` text-lg ${isActive ? 'underline underline-offset-4' : ''}`}>Home</NavLink></li>
         <li><NavLink to='/statistics' className={({ isActive }) => ` text-lg ${isActive ? 'underline underline-offset-4' : ''}`}>Statistics</NavLink></li>
         <li><NavLink to='/dashboard' className={({ isActive }) => ` text-lg ${isActive ? 'underline underline-offset-4' : ''}`}>Dashboard</NavLink></li>
+        <li><NavLink to='/Brand' className={({ isActive }) => ` text-lg ${isActive ? 'underline underline-offset-4' : ''}`}>Our Brands</NavLink></li>
     </>
 
     const location = useLocation();
@@ -21,7 +24,7 @@ const Navbar = () => {
             <div className={(location.pathname == '/' || location.pathname.slice(1, 9) == 'category') ? 'pt-3 bg-[#9538E2] text-white overflow-hidden rounded-2xl' : 'pt-3'}>
                 <div className="navbar w-11/12 mx-auto px-0 py-0">
                     <div className="navbar-start">
-                        <NavLink className=" text-xl font-bold lg:text-2xl">Gadget Heaven</NavLink>
+                        <NavLink className={location.pathname !== '/' ? " text-xl font-bold lg:text-2xl text-[#9538E2]" : 'text-xl font-bold lg:text-2xl'}>Gadget Heaven</NavLink>
                     </div>
                     <div className="navbar-center hidden lg:flex">
                         <ul className="menu menu-horizontal px-1 gap-3">
